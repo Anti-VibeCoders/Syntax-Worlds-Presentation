@@ -1,6 +1,7 @@
 import Footer from "./components/Footer"
 import Header from "./components/Header"
-import Message from "./components/Message"
+import Hero from "./components/Hero"
+import Technologies from "./components/Technologies"
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
         <Header />
       </div>
       <div className="main-content flex-1">
+        <Hero />
+        <Technologies />
       </div>
       <div className="footer-container w-full">
         <Footer />
