@@ -4,3 +4,51 @@
 @theme {
   --font-inter: 'Inter', sans-serif;
 }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes reverse-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+
+.float {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.reverse-float {
+  animation: reverse-float 2.5s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #42033f;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #42033f #000;
+}
