@@ -22,3 +22,5 @@ function Conctacs(){
         </>
     )
 }
+
+export default Conctacs;
