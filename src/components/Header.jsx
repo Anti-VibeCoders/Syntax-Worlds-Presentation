@@ -3,7 +3,7 @@ import { Code, MessageCircle } from "lucide-react";
 function Header() {
     return (
         <>
-            <header className="w-full h-15 flex items-center justify-around bg-white/5 backdrop-blur-2xl">
+            <header className="w-full h-15 flex items-center justify-around bg-white/5 backdrop-blur-2xl max-md:justify-between max-md:px-4">
                 <div className="header-left">
                     <a href="/" className="flex items-center space-x-2 group">
                         <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -14,7 +14,7 @@ function Header() {
                         </span>
                     </a>
                 </div>
-                <div className="header-center flex gap-8 items-center text-gray-200">
+                <div className="header-center flex gap-8 items-center text-gray-200 max-md:hidden">
                     <a href="#" className="hover:text-gray-300 transition-colors duration-200">Inicio</a>
                     <a href="#" className="hover:text-gray-300 transition-colors duration-200">Proyectos</a>
                     <a href="#" className="hover:text-gray-300 transition-colors duration-200">Equipo</a>
