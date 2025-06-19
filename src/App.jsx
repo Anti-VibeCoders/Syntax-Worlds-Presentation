@@ -2,6 +2,7 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Technologies from "./components/Technologies"
+import Conctacs from "./components/Conctacs"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className="main-content flex-1">
         <Hero />
         <Technologies />
+        <Conctacs />
       </div>
       <div className="footer-container w-full">
         <Footer />

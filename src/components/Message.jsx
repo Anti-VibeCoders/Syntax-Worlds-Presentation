@@ -5,22 +5,22 @@ function Message(){
             <h4>Envíanos un mensaje</h4>
          <label>Completa el formulario y te responderemos lo antes posible</label>
          <form>
-            <label>Nombre</label>
+            <label className="">Nombre</label>
              <input type="text" />
             <label>Email</label>
              <input type="email" />
             <label>Asunto</label>
-            <select className="selectAffair">
-                <Option value = "">Selecciona un tema</Option>
-                <Option value = "Question">Preguntas</Option>
-                <Option value = "Service">Servicios</Option>
-                <Option value = "suggestion">Sugerencias</Option>
+            <select>
+                <option value = "">Selecciona un tema</option>
+                <option value = "Question">Preguntas</option>
+                <option value = "Service">Servicios</option>
+                <option value = "suggestion">Sugerencias</option>
             </select>
-            <select className="selectService">
-                <Option value = "">Selecciona un Servicio</Option>
-                <Option value = "Web">Sitio WEB</Option>
-                <Option value = "Bot-discord">Bot de discord</Option>
-                <Option value = "Other">Otros</Option>
+            <select>
+                <option value = "">Selecciona un Servicio</option>
+                <option value = "Web">Sitio WEB</option>
+                <option value = "Bot-discord">Bot de discord</option>
+                <option value = "Other">Otros</option>
             </select>
 
             <label>Mensaje</label>
