@@ -18,6 +18,7 @@ function App() {
         <Technologies />
         <Portfolio />
         <About />
+        <Conctacs />
       </div>
       <div className="footer-container w-full">
         <Footer />
