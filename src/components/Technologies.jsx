@@ -1,4 +1,4 @@
-import { Headphones, Laptop, Zap } from "lucide-react"
+import { Headphones, Laptop, MessageCircle, Zap } from "lucide-react"
 import LanguageCard from "./LanguageCard"
 import ServicesCards from "./ServicesCards"
 
@@ -47,10 +47,10 @@ function Technologies() {
         <>
             <div className="technologies-container h-auto w-full flex flex-col gap-12 justify-center items-center bg-gradient-to-r from-purple-500/10 to-cyan-500/10 py-20">
                 <div className="text-container flex flex-col items-center justify-center">
-                    <h2 className="bg-gradient-to-br from-white via-purple-100 to-purple-300 text-transparent bg-clip-text font-bold text-5xl leading-normal max-2xl:text-4xl">Tecnologías que Utilizamos</h2>
-                    <p className="text-slate-400 text-xl">Nuestra comunidad trabaja con las últimas tecnologías</p>
+                    <h2 className="bg-gradient-to-br from-white via-purple-100 to-purple-300 text-transparent bg-clip-text font-bold text-5xl leading-normal max-2xl:text-4xl text-center max-sm:text-3xl">Tecnologías que Utilizamos</h2>
+                    <p className="text-slate-400 text-xl text-center max-sm:text-base max-sm:max-w-[35ch]">Nuestra comunidad trabaja con las últimas tecnologías</p>
                 </div>
-                <div className="cards-container gap-8 h-full w-full grid grid-cols-5 max-2xl:grid-cols-4 grid-rows-3 px-8">
+                <div className="cards-container gap-8 h-full w-full grid grid-cols-5 max-xl:grid-cols-3 max-2xl:grid-cols-4 grid-rows-3 px-8 max-md:grid-cols-2 max-sm:grid-cols-1">
 
                     {languageNames.map(language => {
                         const icon = languageIcons[language]
@@ -59,10 +59,20 @@ function Technologies() {
                         )
                     })}
                 </div>
-                <div className="services-cards grid grid-cols-3 grid-rows-1 px-8 gap-8 h-full w-full mt-12">
+                <div className="services-cards grid grid-cols-3 grid-rows-1 px-8 gap-8 h-full w-full mt-12 max-xl:grid-cols-2 max-xl:justify-items-cente max-md:grid-cols-1">
                     {services.map((service) => {
                         return <ServicesCards key={service.title} serviceIcon={service.icon} className="rounded-xl w-[90%] mx-auto p-8 gap-3 text-slate-400" iconClass={`p-4 rounded-lg border w-max h-max ${service.color}`} serviceTitle={service.title} serviceDescription={service.description} />
                     })}
+                </div>
+                <div className="ask-for-team flex flex-col gap-6 w-[90%] justify-center items-center py-20 mx-auto rounded-xl bg-white/5 backdrop-blur-xl border border-white/10">
+                    <h2 className="text-5xl font-bold bg-gradient-to-r from-purple-300 via-white to-purple-300 bg-clip-text text-transparent text-center max-lg:text-4xl max-md:text-3xl max-sm:text-2xl">¿Buscas un equipo de desarrollo?</h2>
+                    <p className="text-slate-300 max-w-[70ch] mx-auto text-center text-lg max-lg:px-4 max-md:text-base">Confía en Syntax World para crear soluciones de software a medida que impulsen tu negocio al siguiente nivel. Contáctanos hoy mismo para discutir tus necesidades.</p>
+                    <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white hover:scale-[1.02] active:scale-100 hover:shadow-lg hover:shadow-purple-300/20 transition-all duration-200 rounded-md w-max flex px-12 cursor-pointer justify-center items-center py-2 font-semibold" onClick={() => {
+                        document.querySelector('.main-content').scrollIntoView({ behavior: 'smooth' })
+                    }}>
+                        <MessageCircle className="w-4 h-4 mr-2" />
+                        Contáctanos
+                    </button>
                 </div>
             </div>
         </>
