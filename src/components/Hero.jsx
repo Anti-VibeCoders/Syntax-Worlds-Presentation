@@ -32,7 +32,7 @@ function Hero() {
                                 <button
                                     className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white rounded-full w-max flex cursor-pointer justify-center items-center py-3 px-12 font-semibold hover:scale-[1.02] active:scale-100 transition-all duration-200 max-sm:w-[80%] max-sm:mx-auto"
                                     onClick={() => {
-                                        document.querySelector('.main-content').scrollIntoView({ behavior: 'smooth' })
+                                        document.querySelector('.contact-container').scrollIntoView({ behavior: 'smooth' })
                                     }}>
                                     <MessageCircle className="w-4 h-4 mr-2" />
                                     Solicitar Cotización

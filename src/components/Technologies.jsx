@@ -68,7 +68,7 @@ function Technologies() {
                     <h2 className="text-5xl font-bold bg-gradient-to-r from-purple-300 via-white to-purple-300 bg-clip-text text-transparent text-center max-lg:text-4xl max-md:text-3xl max-sm:text-2xl">¿Buscas un equipo de desarrollo?</h2>
                     <p className="text-slate-300 max-w-[70ch] mx-auto text-center text-lg max-lg:px-4 max-md:text-base">Confía en Syntax World para crear soluciones de software a medida que impulsen tu negocio al siguiente nivel. Contáctanos hoy mismo para discutir tus necesidades.</p>
                     <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white hover:scale-[1.02] active:scale-100 hover:shadow-lg hover:shadow-purple-300/20 transition-all duration-200 rounded-md w-max flex px-12 cursor-pointer justify-center items-center py-2 font-semibold" onClick={() => {
-                        document.querySelector('.main-content').scrollIntoView({ behavior: 'smooth' })
+                        document.querySelector('.contact-container').scrollIntoView({ behavior: 'smooth' })
                     }}>
                         <MessageCircle className="w-4 h-4 mr-2" />
                         Contáctanos

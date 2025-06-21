@@ -66,13 +66,10 @@ function Portfolio() {
                         <button
                             className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white rounded-md w-max flex cursor-pointer justify-center items-center py-3 px-12 font-semibold transition-all duration-200 max-sm:w-[80%] max-sm:mx-auto max-sm:text-sm"
                             onClick={() => {
-                                document.querySelector('.main-content').scrollIntoView({ behavior: 'smooth' })
+                                document.querySelector('.contact-container').scrollIntoView({ behavior: 'smooth' })
                             }}>
                             <MessageCircle className="w-4 h-4 mr-2" />
                             Solicitar Cotización
-                        </button>
-                        <button className="bg-white text-purple-400 border border-purple-500 rounded-md w-max flex justify-center items-center h-max px-12 py-3 gap-4 cursor-pointer hover:bg-purple-300 transition-all duration-200 hover:text-white max-sm:w-[80%] max-sm:mx-auto max-sm:text-sm">
-                            Consulta Gratuita
                         </button>
                     </div>
                 </div>
