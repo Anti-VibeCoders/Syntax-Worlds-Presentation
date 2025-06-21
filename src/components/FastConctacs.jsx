@@ -9,7 +9,9 @@ function FastConctacs(){
                 <div className="card-icon stroke-puyrple-500 text-purple-500 bg-purple-800/50 p-3 border border-purple-500 rounded-lg ">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9 3q-2.5.5-5 2q-3 5-3 12q2 2.5 6 4q1-1.5 1.5-3.5M7 17q5 2 10 0m-1.5.5q.5 2 1.5 3.5q4-1.5 6-4q0-7-3-12q-2.5-1.5-5-2l-1 2q-2-.5-4 0L9 3"/><circle cx="8" cy="12" r="1"/><circle cx="16" cy="12" r="1"/></g></svg>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col" onClick={() => {
+                    window.open('https://discord.gg/9HYGt3WKVM', '_blank')
+                }}>
                     <b>Discord</b>
                     <span className="text-xs">Unete a nuestro servidor</span>
                 </div>
@@ -19,7 +21,9 @@ function FastConctacs(){
                 <div className="card-icon stroke-blue-500 text-cyan-500 bg-blue-800/50 p-3 border border-blue-500 rounded-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col" onClick={() => {
+                    window.open('mailto:syntaxworld36@gmail.com', '_blank')
+                }}>
                     <b>Email</b>
                     <span className="text-xs">syntaxworld36@gmail.com</span>
                 </div>
