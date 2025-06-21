@@ -68,6 +68,12 @@ function About() {
             tags: ["Backend Developer", "Future Full-Stack Dev"]
         },
         {
+            icon: '/team/jota.webp',
+            name: "Jeferson Ramos",
+            description: "Jota",
+            tags: ["Backend Developer", "C# Developer"]
+        },
+        {
             icon: '/team/said.webp',
             name: "Said Ruíz",
             description: "JunLovin",
@@ -120,7 +126,7 @@ function About() {
                 </div>
                 <div className="team flex flex-col gap-12 justify-center items-center mt-8">
                     <h3 className="text-center text-4xl bg-linear-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent font-bold">Nuestro Equipo</h3>
-                    <div className="valores-cards grid grid-cols-3 gap-8 w-full px-12 max-lg:grid-cols-2 max-md:grid-cols-1">
+                    <div className="valores-cards grid grid-cols-4 max-xl:grid-cols-3 gap-8 w-full px-12 max-lg:grid-cols-2 max-md:grid-cols-1">
                         {team.map(member => {
                             return (
                                 <TeamCard pfp={member.icon} Name={member.name} About={member.description} Badges={member.tags} key={member.name} />
