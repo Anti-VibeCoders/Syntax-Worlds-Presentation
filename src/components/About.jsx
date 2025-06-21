@@ -10,19 +10,13 @@ function About() {
         {
             icon: <UserPlus />,
             iconClass: "stroke-puyrple-500 text-purple-500 bg-purple-800/50 p-3 border border-purple-500 rounded-lg",
-            title: '450+',
+            title: '10+',
             description: 'Clientes Satisfechos'
-        },
-        {
-            icon: <Code />,
-            iconClass: "stroke-blue-500 text-cyan-500 bg-blue-800/50 p-3 border border-blue-500 rounded-lg",
-            title: '120+',
-            description: 'Proyectos Entregados'
         },
         {
             icon: <Globe />,
             iconClass: "stroke-green-500 text-green-500 bg-green-800/50 p-3 border border-green-500 rounded-lg",
-            title: '8+',
+            title: '1+',
             description: 'Años de Experiencia'
         },
         {
@@ -84,21 +78,15 @@ function About() {
     const timeline = [
         {
             numberClass: 'stroke-purple-500 text-purple-500 bg-purple-800/50 border border-purple-500 text-3xl max-xl:text-2xl font-bold',
-            number: 2016,
+            number: 2024,
             title: 'Fundación',
             description: 'Syntax World se fundó con la visión de ofrecer soluciones de software innovadoras.'
         },
         {
             numberClass: 'stroke-blue-500 text-cyan-500 bg-blue-800/50 border border-blue-500 text-3xl max-xl:text-2xl font-bold',
-            number: 2019,
+            number: 2025,
             title: 'Expansión',
             description: 'Ampliamos nuestros servicios y comenzamos a trabajar con clientes internacionales.'
-        },
-        {
-            numberClass: 'stroke-green-500 text-green-500 bg-green-800/50 border border-green-500 text-3xl max-xl:text-2xl font-bold',
-            number: 2025,
-            title: 'Liderazgo',
-            description: 'Nos consolidamos como líderes en el desarrollo de software a medida.'
         },
     ]
 
@@ -109,7 +97,7 @@ function About() {
                     <h2 className="text-5xl font-bold bg-linear-to-r from-purple-300 via-purple-50 to-blue-500 bg-clip-text text-transparent leading-normal mb-2 text-center max-sm:text-3xl max-xl:text-4xl">Conoce a Syntax World</h2>
                     <p className="text-slate-300 text-xl max-w-[70ch] text-center mx-auto max-md:text-base max-md:px-4">Somos un equipo de desarrollo de software dedicado a ofrecer soluciones innovadoras y de alta calidad a nuestros clientes.</p>
                 </div>
-                <div className="info-cards grid grid-cols-4 gap-12 w-full px-12 max-2xl:gap-8 max-xl:grid-cols-2 max-md:grid-cols-1">
+                <div className="info-cards grid grid-cols-3 gap-12 w-full px-12 max-2xl:gap-8 max-xl:grid-cols-2 max-md:grid-cols-1">
                     {info.map(inf => {
                         return (
                             <InfoCards Icon={inf.icon} CardTitle={inf.title} CardDescription={inf.description} iconClass={inf.iconClass} key={inf.title} />
@@ -142,7 +130,7 @@ function About() {
                 </div>
                 <div className="our-history bg-slate-800/50 backdrop-blur-sm border-slate-700/50 flex justify-center items-center flex-col w-[97%] mx-auto rounded-xl py-8 px-8 gap-10">
                     <h3 className="font-bold bg-linear-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent text-3xl">Nuestra Historia</h3>
-                    <div className="timeline grid grid-cols-3 gap-12 max-md:grid-cols-2 max-sm:grid-cols-1">
+                    <div className="timeline grid grid-cols-2 gap-12 max-md:grid-cols-2 max-sm:grid-cols-1">
                         {timeline.map(time => {
                             return (
                                 <Timeline key={time.title} Number={time.number} Title={time.title} Description={time.description} numberClass={time.numberClass} />
