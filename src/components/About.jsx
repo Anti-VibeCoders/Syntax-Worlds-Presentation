@@ -4,7 +4,52 @@ import ValueCards from "./ValueCards"
 import TeamCard from "./TeamCard"
 import Timeline from "./Timeline"
 
+import { useRef, useEffect } from 'react';
+import { gsap } from '../gsap-init';
+
 function About() {
+    const containerRef = useRef(null);
+    const columnsRef = useRef([]);
+
+    useEffect(() => {
+        const section = containerRef.current;
+        const cols = columnsRef.current;
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                section,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+            gsap.fromTo(
+                cols,
+                { y: 40, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.7,
+                    stagger: 0.18,
+                    ease: "power2.out",
+                    delay: 0.2,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+        }, section);
+        return () => ctx.revert();
+    }, []);
 
     const info = [
         {
@@ -98,7 +143,7 @@ function About() {
 
     return (
         <>
-            <div className="about-container py-20 flex flex-col gap-12 items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <section ref={containerRef} className="about-container flex flex-col gap-12 items-center justify-center w-full py-20 px-2 max-md:px-1 max-md:py-10">
                 <div className="about-text flex justify-center items-center flex-col">
                     <h2 className="text-5xl font-bold bg-linear-to-r from-purple-300 via-purple-50 to-blue-500 bg-clip-text text-transparent leading-normal mb-2 text-center max-sm:text-3xl max-xl:text-4xl">Conoce a Syntax World</h2>
                     <p className="text-slate-300 text-xl max-w-[70ch] text-center mx-auto max-md:text-base max-md:px-4">Somos un equipo de desarrollo de software dedicado a ofrecer soluciones innovadoras y de alta calidad a nuestros clientes.</p>
@@ -114,9 +159,9 @@ function About() {
                     <h2 className="text-5xl font-bold bg-gradient-to-r from-purple-300 via-white to-purple-300 bg-clip-text text-transparent text-center max-lg:text-4xl max-md:text-3xl max-sm:text-3xl">Nuestra Misión</h2>
                     <p className="text-slate-300 max-w-[80ch] mx-auto text-center text-lg max-lg:px-4 max-md:text-base">En Syntax World, nuestra misión es proporcionar servicios de desarrollo de software excepcionales que impulsen el éxito de nuestros clientes. Nos comprometemos a ofrecer soluciones personalizadas, innovadoras y de alta calidad que superen sus expectativas.</p>
                 </div>
-                <div className="valores flex flex-col gap-12 justify-center items-center mt-8">
+                <div className="valores flex flex-col gap-12 justify-center items-center mt-8 w-full">
                     <h3 className="text-center text-4xl bg-linear-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent font-bold">Nuestra Valores</h3>
-                    <div className="valores-cards grid grid-cols-2 gap-8 grid-rows-2 w-full px-12 max-lg:grid-cols-1">
+                    <div className="valores-cards grid grid-cols-2 gap-8 grid-rows-2 w-full px-12 max-lg:grid-cols-1 w-full max-sm:px-4">
                         {values.map(value => {
                             return (
                                 <ValueCards Icon={value.icon} Title={value.title} Description={value.description} iconClass={value.iconClass} key={value.title} />
@@ -144,7 +189,7 @@ function About() {
                         })}
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 }
