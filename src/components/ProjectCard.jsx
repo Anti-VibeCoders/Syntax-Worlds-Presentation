@@ -45,10 +45,10 @@ function ProjectCard({ ProjectName, ProjectImage = "https://kzmfrjt5vrzr76692jbj
                         GitHub
                     </button>
                     <div className="preview-btn w-16">
-                        <button className="bg-white flex items-center justify-center rounded-md w-full cursor-pointer h-full" onClick={() => {
+                        <button className="bg-white flex items-center justify-center rounded-md w-full cursor-pointer h-full hover:bg-purple-300 hover:text-white hover:stroke-white transition-all duration-200" onClick={() => {
                             window.open(ProdLink, '_blank')
                         }}>
-                            <ExternalLink className="size-4 text-slate-400 stroke-slate-400" />
+                            <ExternalLink className="size-4" />
                         </button>
                     </div>
                 </div>
