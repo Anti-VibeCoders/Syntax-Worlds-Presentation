@@ -1,8 +1,17 @@
-function TeamCard({ className, pfp, Name, About, Badges }) {
+import { useState } from "react"
+import ImagePreviewPortal from "./ImagePreviewPortal"
+
+function TeamCard({ className, pfp, Name, About, Badges, GitUser }) {
+    const [activePfp, setActivePfp] = useState(false)
+
     return (
         <>
-            <div className={`bg-slate-800/50 backdrop-blur-sm border-slate-700/50 border hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 text-center ${className} flex flex-col items-center justify-center px-6 py-8 rounded-xl gap-4`}>
-                <div className="pfp flex justify-center items-center">
+            <div className={`bg-slate-800/50 backdrop-blur-sm border-slate-700/50 border hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 text-center ${className} flex flex-col items-center justify-center px-6 py-8 rounded-xl gap-4 cursor-pointer`} onClick={() => {
+                window.open(`https://github.com/${GitUser}`, '_blank')
+            }}>
+                <div className="pfp flex justify-center items-center cursor-pointer" onClick={() => {
+                    setActivePfp(true)
+                }}>
                     <div className="image size-26 rounded-full border border-purple-500/50">
                         <img src={pfp} className="w-full h-full rounded-full" />
                     </div>
@@ -21,6 +30,8 @@ function TeamCard({ className, pfp, Name, About, Badges }) {
                     })}
                 </div>
             </div>
+
+            <ImagePreviewPortal open={activePfp} src={pfp} onClose={() => setActivePfp(false)} />
         </>
     )
 }

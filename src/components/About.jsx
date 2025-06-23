@@ -104,25 +104,29 @@ function About() {
             icon: '/team/lobo.webp',
             name: 'Santiago Parra',
             description: 'Lobosanplay',
-            tags: ["Backend Developer"]
+            tags: ["Backend Developer"],
+            GitUser: "Lobosanplay"
         },
         {
             icon: '/team/aram.webp',
             name: "Aram Musset",
             description: "RamCode",
-            tags: ["Backend Developer", "Future Full-Stack Dev"]
+            tags: ["Backend Developer", "Future Full-Stack Dev"],
+            GitUser: "CodeFoxZ37"  
         },
         {
             icon: '/team/jota.webp',
             name: "Jeferson Ramos",
             description: "Jota",
-            tags: ["Backend Developer", "C# Developer"]
+            tags: ["Backend Developer", "C# Developer"],
+            GitUser: "Jramosd-lang"
         },
         {
             icon: '/team/said.webp',
             name: "Said Ruíz",
             description: "JunLovin",
-            tags: ["Full-Stack Developer"]
+            tags: ["Full-Stack Developer"],
+            GitUser: "JunLovin"
         }
     ]
 
@@ -174,7 +178,7 @@ function About() {
                     <div className="valores-cards grid grid-cols-4 max-xl:grid-cols-3 gap-8 w-full px-12 max-lg:grid-cols-2 max-md:grid-cols-1">
                         {team.map(member => {
                             return (
-                                <TeamCard pfp={member.icon} Name={member.name} About={member.description} Badges={member.tags} key={member.name} />
+                                <TeamCard pfp={member.icon} Name={member.name} About={member.description} Badges={member.tags} GitUser={member.GitUser} key={member.name} />
                             )
                         })}
                     </div>
