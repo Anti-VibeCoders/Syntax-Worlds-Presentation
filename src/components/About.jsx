@@ -160,8 +160,8 @@ function About() {
                     <p className="text-slate-300 max-w-[80ch] mx-auto text-center text-lg max-lg:px-4 max-md:text-base">En Syntax World, nuestra misión es proporcionar servicios de desarrollo de software excepcionales que impulsen el éxito de nuestros clientes. Nos comprometemos a ofrecer soluciones personalizadas, innovadoras y de alta calidad que superen sus expectativas.</p>
                 </div>
                 <div className="valores flex flex-col gap-12 justify-center items-center mt-8 w-full">
-                    <h3 className="text-center text-4xl bg-linear-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent font-bold">Nuestra Valores</h3>
-                    <div className="valores-cards grid grid-cols-2 gap-8 grid-rows-2 w-full px-12 max-lg:grid-cols-1 w-full max-sm:px-4">
+                    <h3 className="text-center text-4xl bg-linear-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent font-bold">Nuestros Valores</h3>
+                    <div className="valores-cards grid grid-cols-2 gap-8 grid-rows-2 w-full px-12 max-lg:grid-cols-1 max-sm:px-4">
                         {values.map(value => {
                             return (
                                 <ValueCards Icon={value.icon} Title={value.title} Description={value.description} iconClass={value.iconClass} key={value.title} />
