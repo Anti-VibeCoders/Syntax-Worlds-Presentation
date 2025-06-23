@@ -179,7 +179,7 @@ function About() {
                         })}
                     </div>
                 </div>
-                <div className="our-history bg-slate-800/50 backdrop-blur-sm border-slate-700/50 flex justify-center items-center flex-col w-[97%] mx-auto rounded-xl py-8 px-8 gap-10">
+                <div className="our-history bg-slate-800/50 backdrop-blur-sm border-slate-700/50 flex justify-center items-center flex-col w-[97%] mx-auto rounded-xl py-8 px-8 gap-10 mt-6">
                     <h3 className="font-bold bg-linear-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent text-3xl">Nuestra Historia</h3>
                     <div className="timeline grid grid-cols-2 gap-12 max-md:grid-cols-2 max-sm:grid-cols-1">
                         {timeline.map(time => {
