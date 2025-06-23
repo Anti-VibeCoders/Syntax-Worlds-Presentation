@@ -6,9 +6,7 @@ function TeamCard({ className, pfp, Name, About, Badges, GitUser }) {
 
     return (
         <>
-            <div className={`bg-slate-800/50 backdrop-blur-sm border-slate-700/50 border hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 text-center ${className} flex flex-col items-center justify-center px-6 py-8 rounded-xl gap-4 cursor-pointer`} onClick={() => {
-                window.open(`https://github.com/${GitUser}`, '_blank')
-            }}>
+            <div className={`bg-slate-800/50 backdrop-blur-sm border-slate-700/50 border hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 text-center ${className} flex flex-col items-center justify-center px-6 py-8 rounded-xl gap-4`} >
                 <div className="pfp flex justify-center items-center cursor-pointer" onClick={() => {
                     setActivePfp(true)
                 }}>
@@ -17,7 +15,9 @@ function TeamCard({ className, pfp, Name, About, Badges, GitUser }) {
                     </div>
                 </div>
                 <div className="user-info flex flex-col gap-2">
-                    <h3 className="text-2xl font-bold bg-linear-to-r from-purple-300 via-white to-cyan-300 bg-clip-text text-transparent text-center">{Name}</h3>
+                    <h3 className="text-2xl font-bold bg-linear-to-r from-purple-300 via-white to-cyan-300 bg-clip-text text-transparent text-center cursor-pointer" onClick={() => {
+                        window.open(`https://github.com/${GitUser}`, '_blank')
+                    }}>{Name}</h3>
                     <p className="text-purple-300/70 text-center font-semibold">{About}</p>
                 </div>
                 <div className="badges flex justify-center flex-wrap gap-3">
