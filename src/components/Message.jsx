@@ -101,7 +101,7 @@ function Message() {
               <select name="service" id="service" value={formData.service} onChange={handleChange} className={`bg-[#2C2152] border border-[#4C3E73] rounded-md p-2 text-base text-slate-300 ${!activate ? 'opacity-50 cursor-not-allowed' : ''}`}>
               <option value="">Selecciona un Servicio</option>
               <option value="Site Web">Sitio Web</option>
-              <option value="Bot-discord">Bot de discord</option>
+              <option value="Bot-discord">Bot de Discord</option>
               <option value="Other">Otros</option>
             </select>
             )}

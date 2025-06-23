@@ -13,7 +13,7 @@ function FastConctacs(){
                     window.open('https://discord.gg/9HYGt3WKVM', '_blank')
                 }}>
                     <b>Discord</b>
-                    <span className="text-xs">Unete a nuestro servidor</span>
+                    <span className="text-xs">Únete a nuestro servidor</span>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@ function FastConctacs(){
                 </div>
                 <div className="flex flex-col">
                     <b>GitHub</b>
-                    <span className="text-xs">Unete a nuestro servidor</span>
+                    <span className="text-xs">Únete a nuestro servidor</span>
                 </div>
             </div>
 

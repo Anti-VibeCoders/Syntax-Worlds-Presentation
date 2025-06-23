@@ -7,7 +7,7 @@ function WorkingHours() {
                     <span className="text-[#7a7396]">Lunes-Viernes</span><b>9:00 - 18:00 UTC</b>
                 </div>
                 <div className="flex justify-between text-sm">
-                    <span className="text-[#7a7396]">Sabado</span><b>10:00 - 16:00 UTC</b>
+                    <span className="text-[#7a7396]">Sábado</span><b>10:00 - 16:00 UTC</b>
                 </div>
                 <div className="flex justify-between text-sm text-[#7a7396]">
                     <span>Domingo</span><span className="text-red-500 font-semibold">Cerrado</span>
