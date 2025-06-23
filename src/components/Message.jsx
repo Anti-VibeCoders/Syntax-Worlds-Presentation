@@ -97,12 +97,14 @@ function Message() {
               <option value="Other">Otros</option>
 
             </select>
-            <select name="service" id="service" value={formData.service} onChange={handleChange} className={`bg-[#2C2152] border border-[#4C3E73] rounded-md p-2 text-base text-slate-300 ${!activate ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={!activate}>
+            {activate && (
+              <select name="service" id="service" value={formData.service} onChange={handleChange} className={`bg-[#2C2152] border border-[#4C3E73] rounded-md p-2 text-base text-slate-300 ${!activate ? 'opacity-50 cursor-not-allowed' : ''}`}>
               <option value="">Selecciona un Servicio</option>
-              <option value="Site Web">Sitio WEB</option>
+              <option value="Site Web">Sitio Web</option>
               <option value="Bot-discord">Bot de discord</option>
               <option value="Other">Otros</option>
             </select>
+            )}
 
           </div>
           <label htmlFor="message" className="mb-2 text-sm font-semibold">Mensaje</label>
