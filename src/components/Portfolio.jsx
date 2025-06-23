@@ -15,7 +15,7 @@ function Portfolio() {
             projectForks: 0,
             projectParticipants: 5,
             githubLink: 'https://github.com/Anti-VibeCoders/vibe',
-            prodLink: 'https://github.com/Anti-VibeCoders/vibe',
+            prodLink: '',
             tag: 'En Desarrollo',
             tagsClass: 'border border-yellow-500 bg-yellow-300/50 text-yellow-500'
         },
@@ -28,7 +28,7 @@ function Portfolio() {
             projectForks: 0,
             projectParticipants: 3,
             githubLink: 'https://github.com/Anti-VibeCoders/clearmeet',
-            prodLink: 'https://github.com/Anti-VibeCoders/clearmeet',
+            prodLink: '',
             tag: 'En Desarrollo',
             tagsClass: 'border border-yellow-500 bg-yellow-300/50 text-yellow-500'
         },
@@ -111,7 +111,7 @@ function Portfolio() {
                     <p className="text-slate-300 max-w-[70ch] mx-auto text-center text-lg max-lg:px-4 max-md:text-base">¿Buscas un socio tecnológico para llevar tu idea al siguiente nivel? Contáctanos para discutir tus necesidades y cómo podemos ayudarte.</p>
                     <div className="buttons flex justify-center gap-4 max-md:w-full items-center max-sm:flex-col max-sm:items-center max-sm:justify-center">
                         <button
-                            className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white rounded-md w-max flex cursor-pointer justify-center items-center py-3 px-12 font-semibold transition-all duration-200 max-sm:w-[80%] max-sm:mx-auto max-sm:text-sm"
+                            className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white hover:scale-[1.02] active:scale-100 hover:shadow-lg hover:shadow-purple-300/20 transition-all duration-200 rounded-md w-max flex px-12 cursor-pointer justify-center items-center py-3 font-semibold"
                             onClick={() => {
                                 document.querySelector('.contact-container').scrollIntoView({ behavior: 'smooth' })
                             }}>

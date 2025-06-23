@@ -46,7 +46,10 @@ function ProjectCard({ ProjectName, ProjectImage = "https://kzmfrjt5vrzr76692jbj
                     </button>
                     <div className="preview-btn w-16">
                         <button className="bg-white flex items-center justify-center rounded-md w-full cursor-pointer h-full hover:bg-purple-300 hover:text-white hover:stroke-white transition-all duration-200" onClick={() => {
-                            window.open(ProdLink, '_blank')
+                            if (ProdLink.length > 0) {
+                                window.open(ProdLink, '_blank')
+                            }
+                            alert("Se está terminando...")
                         }}>
                             <ExternalLink className="size-4" />
                         </button>
