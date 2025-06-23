@@ -23,7 +23,7 @@ function Header() {
                     }}>Proyectos</a>
                     <a href="#" className="hover:text-gray-300 transition-colors duration-200" onClick={() => {
                         document.querySelector('.about-container').scrollIntoView({ behavior: 'smooth' })
-                    }}>Equipo</a>
+                    }}>Nosotros</a>
                     <a href="#" className="hover:text-gray-300 transition-colors duration-200" onClick={() => {
                         document.querySelector('.contact-container').scrollIntoView({ behavior: 'smooth' })
                     }}>Contacto</a>
