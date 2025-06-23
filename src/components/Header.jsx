@@ -3,7 +3,7 @@ import { Code, MessageCircle } from "lucide-react";
 function Header() {
     return (
         <>
-            <header className="w-full h-15 flex items-center justify-around bg-white/5 backdrop-blur-2xl max-md:justify-between max-md:px-4 header">
+            <header className="w-full h-15 flex items-center justify-around bg-white/5 backdrop-blur-2xl max-md:justify-between max-md:px-4 header fixed top-0 z-50">
                 <div className="header-left">
                     <a href="/" className="flex items-center space-x-2 group">
                         <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -15,16 +15,16 @@ function Header() {
                     </a>
                 </div>
                 <div className="header-center flex gap-8 items-center text-gray-200 max-md:hidden">
-                    <a href="#" className="hover:text-gray-300 transition-colors duration-200" onClick={() => {
-                        document.querySelector('.header').scrollIntoView({ behavior: 'smooth' })
+                    <a className="hover:text-gray-300 transition-colors duration-200 cursor-pointer" onClick={() => {
+                        document.querySelector('.hero-container').scrollIntoView({ behavior: 'smooth' })
                     }}>Inicio</a>
-                    <a href="#" className="hover:text-gray-300 transition-colors duration-200" onClick={() => {
+                    <a className="hover:text-gray-300 transition-colors duration-200 cursor-pointer" onClick={() => {
                         document.querySelector('.portfolio-container').scrollIntoView({ behavior: 'smooth' })
                     }}>Proyectos</a>
-                    <a href="#" className="hover:text-gray-300 transition-colors duration-200" onClick={() => {
+                    <a className="hover:text-gray-300 transition-colors duration-200 cursor-pointer" onClick={() => {
                         document.querySelector('.about-container').scrollIntoView({ behavior: 'smooth' })
                     }}>Nosotros</a>
-                    <a href="#" className="hover:text-gray-300 transition-colors duration-200" onClick={() => {
+                    <a className="hover:text-gray-300 transition-colors duration-200 cursor-pointer" onClick={() => {
                         document.querySelector('.contact-container').scrollIntoView({ behavior: 'smooth' })
                     }}>Contacto</a>
                 </div>
